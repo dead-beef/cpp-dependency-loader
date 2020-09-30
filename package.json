@@ -1,0 +1,38 @@
+{
+  "name": "cpp-dependency-loader",
+  "version": "0.1.0",
+  "author": "dead-beef",
+  "contributors": [],
+  "license": "MIT",
+  "description": "Webpack loader that adds dependencies to C/C++ files.",
+  "keywords": [
+    "webpack",
+    "loader",
+    "wasm",
+    "webassembly",
+    "emscripten",
+    "c",
+    "c++"
+  ],
+  "homepage": "https://github.com/dead-beef/cpp-dependency-loader",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dead-beef/cpp-dependency-loader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dead-beef/cpp-dependency-loader/issues"
+  },
+  "main": "index.js",
+  "dependencies": {},
+  "peerDependencies": {
+    "webpack": "^2.0.0 || ^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "7.x"
+  },
+  "scripts": {
+  },
+  "engines": {
+    "node": ">= 8"
+  }
+}
