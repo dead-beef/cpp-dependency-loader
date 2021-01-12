@@ -7,10 +7,17 @@ module.exports = async function loader(content) {
   try {
     //console.log('query', this.query);
     let emcc = 'emcc';
-    if (typeof this.query === 'object' && this.query.emccPath) {
-      emcc = this.query.emccPath;
+    let flags = [];
+    if (typeof this.query === 'object') {
+      if (this.query.emccPath) {
+        emcc = this.query.emccPath;
+      }
+      if (this.query.emccFlags) {
+        flags = this.query.emccFlags;
+      }
     }
-    const { stdout } = await execFile(emcc, ['-MM', this.resourcePath]);
+    flags.push('-MM', this.resourcePath);
+    const { stdout } = await execFile(emcc, flags);
     const deps = stdout.split(/:?\s+\\?\s*/).filter((fname, i) => (
       i > 0 &&
       fname.length > 0 &&

@@ -43,6 +43,7 @@ npm install cpp-dependency-loader
       loader: 'cpp-dependency-loader',
       options: {
         // emccPath: String,
+        // emccFlags: String[]
       }
     }
   ]
